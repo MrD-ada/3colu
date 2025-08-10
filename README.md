@@ -20,8 +20,56 @@
 
 ## 必要環境
 
-* クラシックエディターでの利用を推奨しています。
+* クラシックエディターを採用しています。
 
 ## ファイル構成
 
 このテーマの主要なファイル構成案は以下の通りです。
+```
+3colu/
+│
+├─ style.css                 # テーマ情報・メインCSS
+├─ functions.php             # ウィジェット登録・カスタマイザー設定等
+├─ index.php                 # トップ・記事一覧表示用
+├─ header.php                # ヘッダー部分
+├─ footer.php                # フッター部分
+├─ sidebar-left.php          # 左サイドバー
+├─ sidebar-right.php         # 右サイドバー
+├─ single.php                # 記事詳細ページ
+├─ archive.php               # アーカイブ/カテゴリー/タグページ
+├─ page.php                  # 固定ページ
+├─ search.php                # 検索結果ページ
+│
+├─ assets/                   # 静的ファイル
+│   ├─ css/style.css
+│   ├─ js/main.js
+│   └─ images/
+│
+├─ template-parts/           # 部分テンプレート
+│   ├─ content-single.php
+│   ├─ content-list.php
+│   └─ share-buttons.php
+│
+├─ inc/                      # 関数・機能追加ファイル
+│   ├─ widgets.php
+│   ├─ customizer.php
+│   ├─ rss-display.php
+│   └─ helpers.php
+│
+└─ screenshot.png            # テーマプレビュー画像
+```
+## ウィジェットエリア一覧（全12箇所）
+
+| エリアID               | 推奨管理名      | 表示場所           |
+| ------------------- | ---------- | -------------- |
+| `ads_header`        | 広告：ヘッダー下   | ヘッダー直下         |
+| `ads_single_top`    | 広告：記事タイトル上 | 記事詳細ページのタイトル直前 |
+| `ads_single_mid`    | 広告：本文中段    | 記事詳細ページ本文の中間   |
+| `ads_single_bottom` | 広告：記事下     | 記事詳細ページ本文直後    |
+| `ads_list_top`      | 広告：記事一覧上   | 記事一覧ページの最上部    |
+| `ads_list_mid`      | 広告：記事一覧中段  | 記事一覧3件目の後など    |
+| `ads_list_bottom`   | 広告：記事一覧下   | 記事一覧ページの最下部    |
+| `sidebar-left`      | 左サイドバー     | 左カラム全体         |
+| `sidebar-right`     | 右サイドバー     | 右カラム全体         |
+| `ads_footer_top`    | 広告：フッター上   | フッター直前         |
+| `footer-widget`     | フッターウィジェット | コピーライト上部など     |
