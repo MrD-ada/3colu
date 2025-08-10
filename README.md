@@ -1,4 +1,4 @@
-# 3colu WordPressテーマ
+# WordPressテーマ『3colu』概要
 
 ## 概要
 
