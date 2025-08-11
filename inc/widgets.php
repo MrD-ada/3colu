@@ -47,6 +47,17 @@ function threecolu_register_all_widgets() {
         'after_title'   => '</h2>',
     ) );
     
+    // 広告：記事タイトル下
+    register_sidebar( array(
+        'name'          => esc_html__( '広告：記事タイトル下', '3colu' ),
+        'id'            => 'ads_single_after_title',
+        'description'   => esc_html__( '記事詳細ページのタイトル直後に表示される広告エリアです。', '3colu' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title screen-reader-text">',
+        'after_title'   => '</h2>',
+    ) );
+    
     // 広告：本文中段
     register_sidebar( array(
         'name'          => esc_html__( '広告：本文中段', '3colu' ),

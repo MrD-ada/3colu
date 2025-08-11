@@ -42,6 +42,12 @@
     </div><!-- .entry-meta -->
   </header><!-- .entry-header -->
   
+  <?php if ( is_active_sidebar( 'ads_single_after_title' ) ) : ?>
+    <div class="list-ads after-title-ads">
+      <?php dynamic_sidebar( 'ads_single_after_title' ); ?>
+    </div>
+  <?php endif; ?>
+  
   <?php if ( has_post_thumbnail() ) : ?>
     <div class="post-thumbnail">
       <?php the_post_thumbnail( 'large', array( 'alt' => get_the_title() ) ); ?>
