@@ -14,15 +14,26 @@
     <div class="header-inner">
       <div class="site-branding">
         <?php
-        if ( is_front_page() && is_home() ) :
-          ?>
-          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-          <?php
-        else :
-          ?>
-          <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-          <?php
-        endif;
+        // カスタマイザーで設定したロゴのIDを取得
+        $custom_logo_id = get_theme_mod( 'custom_logo' );
+
+        // ロゴIDが存在するか確認
+        if ( has_custom_logo() ) {
+            // ロゴ画像を表示するHTMLを生成
+            the_custom_logo();
+        } else {
+            // ロゴが設定されていない場合は、既存のサイトタイトルを表示
+            if ( is_front_page() && is_home() ) :
+                ?>
+                <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                <?php
+            else :
+                ?>
+                <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+                <?php
+            endif;
+        }
+
         $threecolu_description = get_bloginfo( 'description', 'display' );
         if ( $threecolu_description || is_customize_preview() ) :
           ?>

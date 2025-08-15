@@ -4,7 +4,7 @@ Theme URI: https://note.com/mrdshi/n/n793d99a125e4
 Author: Mr.D
 Author URI: https://note.com/mrdshi
 Description: 3カラムのアダルト動画系ブログ向けWordPressテーマ
-Version: 1.2.8
+Version: 1.3.2
 License: Free, but modification and redistribution are prohibited.
 Tags: three-columns, responsive-layout, black, red
 Text Domain: 3colu
@@ -463,7 +463,7 @@ body {
     display: none;
     position: fixed;
     top: 100px;
-    width: 150px;
+    width: 200px;
     z-index: 100;
     background-color: transparent;
 }
@@ -474,7 +474,7 @@ body {
 }
 
 .sticky-sidebar.left {
-    left: calc(50% - 600px - 150px);
+    left: calc(50% - 600px - 180px);
 }
 
 .sticky-sidebar.right {
