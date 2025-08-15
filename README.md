@@ -25,37 +25,36 @@
 
 このテーマの主要なファイル構成案は以下の通りです。
 ```
-3colu/
-│
-├─ style.css                 # テーマ情報・メインCSS
-├─ functions.php             # ウィジェット登録・カスタマイザー設定等
-├─ index.php                 # トップ・記事一覧表示用
-├─ header.php                # ヘッダー部分
-├─ footer.php                # フッター部分
-├─ sidebar-left.php          # 左サイドバー
-├─ sidebar-right.php         # 右サイドバー
-├─ single.php                # 記事詳細ページ
-├─ archive.php               # アーカイブ/カテゴリー/タグページ
-├─ page.php                  # 固定ページ
-├─ search.php                # 検索結果ページ
-│
-├─ assets/                   # 静的ファイル
-│   ├─ css/style.css
-│   ├─ js/main.js
-│   └─ images/
-│
-├─ template-parts/           # 部分テンプレート
-│   ├─ content-single.php
-│   ├─ content-list.php
-│   └─ share-buttons.php
-│
-├─ inc/                      # 関数・機能追加ファイル
-│   ├─ widgets.php
-│   ├─ customizer.php
-│   ├─ rss-display.php
-│   └─ helpers.php
-│
-└─ screenshot.png            # テーマプレビュー画像
+3colu/                        ← テーマのルートディレクトリ
+├─ archive.php                ← アーカイブページ（カテゴリやタグ一覧など）用テンプレート
+├─ footer.php                 ← フッター部分のテンプレート
+├─ functions.php              ← テーマの関数定義（カスタム機能やフックなど）
+├─ header.php                 ← ヘッダー部分のテンプレート（headタグ、ナビゲーションなど）
+├─ index.php                  ← 投稿一覧・メインページのテンプレート（汎用）
+├─ page.php                   ← 固定ページ用テンプレート
+├─ screenshot.png             ← テーマのスクリーンショット（WP管理画面で表示）
+├─ search.php                 ← 検索結果ページ用テンプレート
+├─ sidebar-left.php           ← 左サイドバー用テンプレート
+├─ sidebar-right.php          ← 右サイドバー用テンプレート
+├─ single.php                 ← 投稿詳細ページ（シングルページ）用テンプレート
+├─ style.css                  ← テーマのメインCSS / テーマ情報コメントも含む
+├─ assets/                    ← 静的ファイル（CSS, JS, 画像）格納
+│  ├─ css/
+│  │  └─ style.css            ← 実際のスタイル定義（空ファイルの場合は今後追加用）
+│  ├─ images/                 ← 画像ファイル格納用ディレクトリ
+│  └─ js/
+│     └─ main.js              ← JavaScriptメインファイル
+├─ inc/                       ← 関数・ウィジェット・カスタマイザーなどの補助ファイル
+│  ├─ customizer.php          ← カスタマイザー機能用（WP管理画面でテーマ設定）
+│  ├─ helpers.php             ← 補助関数定義（現在は空ファイル）
+│  ├─ rss-display.php         ← RSS表示用のカスタム関数
+│  └─ widgets.php             ← ウィジェット登録やカスタムウィジェット定義
+└─ template-parts/            ← パーツごとのテンプレート（再利用用）
+   ├─ content-list.php        ← 投稿一覧ループ用パーツ
+   ├─ content-none.php        ← 投稿が無い場合の表示パーツ
+   ├─ content-page.php        ← 固定ページループ用パーツ
+   ├─ content-single.php      ← 投稿詳細ページループ用パーツ
+   └─ share-buttons.php       ← SNSシェアボタン用パーツ
 ```
 ## ウィジェットエリア一覧（全12箇所）
 
@@ -75,5 +74,8 @@
 ## 更新
 V1.2.8（2025.08.11）
 - PC表示で左右サイドバー、メインコンテンツエリアの幅を調整
-- 投稿ページのタイトル下にウィジェットエリア追加
+- 投稿ページのタイトル下にウィジェットエリア追加  
+V1.3.2（2025.08.15）
+- 追尾広告ウィジェットエリア幅を調整
+  
   
